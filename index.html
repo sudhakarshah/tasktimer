@@ -6,7 +6,7 @@
     </head>
     <body bgcolor="#13A9F5">
     <div id="header"><img id="headerPic" src="clock.png" width="25" height="25" alt="time">TASK TIMER</div>
-    <center>
+
       <FORM id="myform" ACTION="">
       <INPUT class="input" TYPE="text" NAME="inputbox" placeholder="Enter task name" VALUE="" onkeyup="keyUp()">
 
@@ -17,12 +17,13 @@
        -->
 
 
-      <INPUT id="startButton" TYPE="button" src="play.png"  disabled=true onClick="nextPage(this.form)">
+      <INPUT id="startButton" TYPE="image"  src="play.png" disabled=true onClick="nextPage(this.form)">
 
 
       </FORM>
-    </center>
+
     <table id="box"></table>
+  <div id="footer"><p> TEXT YOU WANT</p></div>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
       <script src="script.js"></script>

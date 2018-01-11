@@ -37,9 +37,8 @@ function createTask(form){
     sec.push(0);
     taskState.push(1);
     console.log(count);
-    var h='<div id="task"><div class="alignleft" id="name'+count+'">'+taskList[taskList.length-1]+'</div><div class="alignright" ><span class="time">00 secs</span><span id="'+count+'"><img  src="pause.png"  id="playPause"  onClick="pause(this.parentNode.id)"><img src="tick.png" id="finish" onClick="taskFinish(this.parentNode.id)"></span></div></div>'
+    var h='<div id="task'+count+'"><div class="alignleft" id="name'+count+'">'+taskList[taskList.length-1]+'</div><div class="alignright" ><span class="time">00 secs</span><span id="'+count+'"><img  src="pause.png"  id="playPause"  onClick="pause(this.parentNode.id)"><img src="tick.png" id="finish" onClick="taskFinish(this.parentNode.id)"></span></div></div>'
     h='<br>'+h;
-  //  <img src="pause.png" atl="pause" onClick="pause(this.parentNode.id)">
 
     $('#box').append(h);
     count++;
@@ -68,6 +67,7 @@ function taskFinish(id){
   elem.setAttribute("height", "15");
   elem.setAttribute("width", "15");
   document.getElementById("name"+id).appendChild(elem);
+  $('#task'+id).css('background-color', '#C0B4B4');
 }
 
 
