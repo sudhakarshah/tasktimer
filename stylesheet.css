@@ -1,43 +1,43 @@
 *[id^='task']{      /* id of all the tasks div*/
   background-color: #F5F5F5;
-   height: 50px;
-   width: 340px;
-     padding: 5px;
-   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-   text-align: center;
-   vertical-align: middle;
-   line-height: 50px;
+  height: 50px;
+  width: 340px;
+  padding: 5px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
 }
 form{
-position: absolute;
+  position: absolute;
   top: 40%;
   left: 40%;
 }
 
 #headerPic{
   position: relative;
-    top: 6px;
-    margin-left: -50px;
-    padding-right: 0.3em;
+  top: 6px;
+  margin-left: -50px;
+  padding-right: 0.3em;
 
 }
 #startButton{
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 07px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 07px;
 }
 .input{
   width: 240px;
 }
 
 .input::-webkit-input-placeholder {
-    font-size: 16px;
-    line-height: 4;
+  font-size: 16px;
+  line-height: 4;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-box-shadow: 0 0 0 1000px white;     /* code to remove yellow colour in text box in chrome*/
 }
 
 #info{
@@ -70,7 +70,7 @@ input:-webkit-autofill {
   height:30px;
   padding-left: 0.4em;
   position: relative;
-    top: 7px;
+  top: 7px;
 }
 #finish{
   width:30px;
@@ -81,7 +81,7 @@ input:-webkit-autofill {
 }
 
 button {
-    background-color: Transparent;
+  background-color: Transparent;
 }
 
 #box {
@@ -93,6 +93,6 @@ button {
 input[type="text"]{
   border: 0;
   outline: 0;
-  background: transparent;
+  background: transparent;                /* making text box transparent*/
   border-bottom: 1px solid black;
 }
