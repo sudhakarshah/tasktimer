@@ -6,9 +6,20 @@
     </head>
     <body bgcolor="#13A9F5">
     <div id="header"><img id="headerPic" src="clock.png" width="25" height="25" alt="time">TASK TIMER</div>
-    <center>  <FORM id="myform" ACTION="">
+    <center>
+      <FORM id="myform" ACTION="">
       <INPUT class="input" TYPE="text" NAME="inputbox" placeholder="Enter task name" VALUE="" onkeyup="keyUp()">
-      <INPUT id="playButton" TYPE="button" src="" id="playButton"  disabled=true onClick="nextPage(this.form)">
+
+<!--
+        <button onClick="nextPage()">
+          <img src="play.png" id="startButton" atl="Start">
+        </button>
+       -->
+
+
+      <INPUT id="startButton" TYPE="button" src="play.png"  disabled=true onClick="nextPage(this.form)">
+
+
       </FORM>
     </center>
     <table id="box"></table>

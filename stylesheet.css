@@ -57,6 +57,35 @@ form{
 .alignright {
 	float: right;
 }
+
+#playPause{
+  width:30px;
+  height:30px;
+  padding-left: 0.4em;
+  position: relative;
+    top: 7px;
+}
+#finish{
+  width:30px;
+  height:30px;
+    padding-left: 0.4em;
+  position: relative;
+    top: 7px;
+}
+
+
+
+
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+/*
 #play {
   width:10px;
   height:10px;
@@ -67,7 +96,7 @@ form{
   height:10px;
   float:left;
 }
-
+*/
 
 #box {
   position: relative;
