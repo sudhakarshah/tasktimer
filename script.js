@@ -26,7 +26,7 @@ function startTask(form){
   taskList.push(task);
   sec.push(0);
   taskState.push(1);
-  var h='<div id="task'+count+'"><div class="alignleft" id="name'+count+'">'+taskList[taskList.length-1]+'</div><div class="alignright" ><span class="time">00 secs</span><span id="'+count+'"><img  src="pause.png"  id="playPause"  onClick="pause(this.parentNode.id)"><img src="tick.png" id="finish" onClick="taskFinish(this.parentNode.id)"></span></div></div>'
+  var h='<div id="task'+count+'"><div class="alignleft" id="name'+count+'">'+taskList[taskList.length-1]+'</div><div class="alignright" ><span class="time">00 secs</span><span id="'+count+'"><img  src="images/pause.png"  id="playPause"  onClick="pause(this.parentNode.id)"><img src="images/tick.png" id="finish" onClick="taskFinish(this.parentNode.id)"></span></div></div>'
   h='<br>'+h;
   $('#box').append(h);
   count++;
@@ -35,11 +35,11 @@ function startTask(form){
 function pause(id){
   if (taskState[id]==0)
   {
-    $('#'+id).children('#playPause').attr('src', 'pause.png');
+    $('#'+id).children('#playPause').attr('src', 'images/pause.png');
     taskState[id]=1;
   }
   else if (taskState[id]==1){
-    $('#'+id).children('#playPause').attr('src', 'play.png');
+    $('#'+id).children('#playPause').attr('src', 'images/play.png');
     taskState[id]=0;
   }
 }
@@ -52,7 +52,7 @@ function taskFinish(id){
   taskState[id]=-1;
   $("#"+id).hide();
   var elem = document.createElement("img");
-  elem.src = 'done.png';
+  elem.src = 'images/done.png';
   elem.setAttribute("height", "15");
   elem.setAttribute("width", "15");
   document.getElementById("name"+id).appendChild(elem);
