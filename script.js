@@ -4,9 +4,19 @@ var taskState=[];  // 1: on     0: off      -1 : task complete
 var count=0;          // number of tasks
 
 function createTask(form){
-    var p = document.getElementsByTagName("body");
-    p[0].style.background = "none";
-    document.getElementById("myform").style.top = '25%';
+    if(count==0)
+    {
+      var p = document.getElementsByTagName("body");
+      p[0].style.background = "none";
+      document.getElementById("myform").style.top = '262px';
+      document.getElementById("input").style.borderBottom= '2px solid #D8D8D8';
+      $('#input').css('color','#D9D9D9')
+      $('input').removeClass('white-placeholder');
+      $('input').addClass('grey-placeholder');
+      f='<div id="info">This is a simple tool that track tasks that last for how long, be efficient</div>';
+      $('#box').append(f);
+
+    }
     startTask(form);
 }
 
@@ -18,7 +28,7 @@ function startTask(form){
   taskList.push(task);
   sec.push(0);
   taskState.push(1);
-  var h='<div id="task'+count+'"><div class="alignleft" id="name'+count+'">'+taskList[taskList.length-1]+'</div><div class="alignright" ><span class="time">00 secs</span><span id="'+count+'"><img  src="images/pause.png"  id="playPause"  onClick="playPause(this.parentNode.id)"><img src="images/tick.png" id="finish" onClick="taskFinish(this.parentNode.id)"></span></div></div>'
+  var h='<div id="task'+count+'"><span id="name'+count+'">'+taskList[taskList.length-1]+'</span><span class="time">00 secs</span><div id="buttons'+count+'"><img  src="images/pause.png"  id="playPause"  onClick="playPause(this.parentNode.id)"><img src="images/tick.png" id="finish" onClick="taskFinish(this.parentNode.id)"></div></div>'
   h='<br>'+h;            //adding break between two tasks
   $('#box').append(h);   // appending new task div
   count++;
@@ -26,7 +36,7 @@ function startTask(form){
 
 // function to disable the start button when textbox is empty
 function keyUp(event){
-  var i=document.getElementsByClassName("input")[0];
+  var i=document.getElementById("input");
   console.log(i.value);
   if(i.value=="")
       document.getElementById("startButton").disabled=true;
@@ -36,13 +46,14 @@ function keyUp(event){
 
 // changing play pause state and button image
 function playPause(id){
+  id=id.substring(7);
   if (taskState[id]==0)
   {
-    $('#'+id).children('#playPause').attr('src', 'images/pause.png');
+    $('#buttons'+id).children('#playPause').attr('src', 'images/pause.png');
     taskState[id]=1;
   }
   else if (taskState[id]==1){
-    $('#'+id).children('#playPause').attr('src', 'images/play.png');
+    $('#buttons'+id).children('#playPause').attr('src', 'images/play.png');
     taskState[id]=0;
   }
 }
@@ -53,14 +64,13 @@ function pad ( val ) {
 
 
 function taskFinish(id){
+  id=id.substring(7);
+  console.log(id);
   taskState[id]=-1;
-  $("#"+id).hide();           // hiding the buttons when task finishes
-  var elem = document.createElement("img");
-  elem.src = 'images/done.png';
-  elem.setAttribute("height", "15");
-  elem.setAttribute("width", "15");
-  document.getElementById("name"+id).appendChild(elem);
-  $('#task'+id).css('background-color', '#C0B4B4');             // changing background color of task div
+  $("#buttons"+id).hide();           // hiding the buttons when task finishes
+  $("#task"+id).children(".time").css('right','18px');
+  document.getElementById("name"+id).innerHTML = '<span class="tick">&#x2714;</span> '+taskList[id];
+  $('#task'+id).css('background-color', '#E7E7E7');             // changing background color of task div
 }
 
 function setTime()
