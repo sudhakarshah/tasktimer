@@ -1,4 +1,3 @@
-
 body {
   width: 1440px;
   height: 1024px;
@@ -11,10 +10,8 @@ body {
   position: absolute;
   background-color: #6CADFF;
   width:1440px;
-  /*
-width:100%
-  */
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
+  font-weight: bold;
   height: 198px;
   font-size: 24px;
   color: #FFFFFF;
@@ -25,24 +22,19 @@ width:100%
   position: relative;
   top: 15px;
   padding-right: 15px;
-    /*
-
-  top: 6px;
-  margin-left: -50px;
-  padding-right: 0.3em;
-    */
 }
+
 #myform{
   position: absolute;
   width: 776px;
   top:528px;
   left:330px;
-
 }
+
 #input{
   width: 700px;
   height:24px;
-  font-family: OpenSans;
+    font-family: 'Open Sans';
   font-size: 24px;
   color: #FFFFFF;
   border: 0;
@@ -50,31 +42,18 @@ width:100%
   background: transparent;
   border-bottom: 2px solid white;
 }
-/*
-.temp::-webkit-input-placeholder {
-  font-family: OpenSans;
-  font-size: 24px;
-  color: #FFFFFF;
-}
-*/
 
-#input.grey-placeholder::-webkit-input-placeholder {
-  font-family: OpenSans;
+#input.grey-placeholder::-webkit-input-placeholder {  /* to change color of placeholder*/
+  font-family: 'Open Sans';
   font-size: 24px;
   color: #D9D9D9;
 }
+
 #input.white-placeholder::-webkit-input-placeholder {
-  font-family: OpenSans;
+  font-family: 'Open Sans';
   font-size: 24px;
   color: #FFFFFF;
 }
-
-.temp{
-}
-.temp::-webkit-input-placeholder {
-      color: #b2cde0;
-  }
-
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px white;     /* code to remove yellow colour in text box in chrome*/
@@ -84,13 +63,12 @@ input:-webkit-autofill {
   height: 56px;
   width: 56px;
 }
-/* take care of 20px gap btw imput and start*/
+
 #box {
   position:relative;
   width: 818px;
   top: 398px;
   left: 311px;
-/*  margin: auto;*/
 }
 
 *[id^='task']{      /* id of all the tasks div*/
@@ -100,26 +78,14 @@ input:-webkit-autofill {
   box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
   width: 100%;
   height:144px;
-
   vertical-align: middle;
   line-height: 144px;
-
-  /*
-  background-color: #F5F5F5;
-  height: 50px;
-  width: 340px;
-  padding: 5px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-  text-align: center;
-  vertical-align: middle;
-  line-height: 50px;
-  */
 }
 
 *[id^='name']{
   position: relative;
   left:19px;
-  font-family: OpenSans;
+  font-family: 'Open Sans';
   font-size: 24px;
   color: #888888;
 
@@ -128,7 +94,7 @@ input:-webkit-autofill {
 .time{
   position: absolute;
   right:178px;
-  font-family: OpenSans;
+  font-family: 'Open Sans';
   font-size: 24px;
   color: #D9D9D9;
 }
@@ -145,7 +111,6 @@ input:-webkit-autofill {
   position: relative;
   padding-right:28px;
   top:22px;
-
 }
 
 #finish{
@@ -153,50 +118,23 @@ input:-webkit-autofill {
   height:56px;
   position: relative;
   top:22px;
-
 }
+
 #footer{
   position:relative;
 }
+
 #info{
   position:absolute;
   bottom: -70px;
   width: 298px;
   text-align: center;
   left:260px;
-  font-family: OpenSans;
+  font-family: 'Open Sans';
   font-size: 16px;
   color: #D9D9D9;
 }
 
 .tick{
   color: #8EF377
-}
-
-  /*
-  transform: rotate(42deg);
-  background: #8EF377;
-#playPause{
-
-  position: relative;
-  left:660px;
-  top: 0px;
-  width:56px;
-  height:56px;
-  vertical-align: middle;
-
-  top: 7px;
-}
-
-#finish{
-  width:30px;
-  height:30px;
-  padding-left: 0.4em;
-  position: relative;
-  top: 7px;
-}
-*/
-
-button {
-  background-color: Transparent;
 }

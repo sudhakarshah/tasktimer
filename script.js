@@ -11,15 +11,13 @@ function createTask(form){
       document.getElementById("myform").style.top = '262px';
       document.getElementById("input").style.borderBottom= '2px solid #D8D8D8';
       $('#input').css('color','#D9D9D9')
-      $('input').removeClass('white-placeholder');
+      $('input').removeClass('white-placeholder');    //changing color of the placeholder
       $('input').addClass('grey-placeholder');
       f='<div id="info">This is a simple tool that track tasks that last for how long, be efficient</div>';
       $('#box').append(f);
-
     }
     startTask(form);
 }
-
 
 function startTask(form){
   document.getElementById("startButton").disabled=true;
@@ -69,7 +67,7 @@ function taskFinish(id){
   taskState[id]=-1;
   $("#buttons"+id).hide();           // hiding the buttons when task finishes
   $("#task"+id).children(".time").css('right','18px');
-  document.getElementById("name"+id).innerHTML = '<span class="tick">&#x2714;</span> '+taskList[id];
+  document.getElementById("name"+id).innerHTML = '<span class="tick">&#x2714;</span> '+taskList[id];  // adding tick to the name of the task
   $('#task'+id).css('background-color', '#E7E7E7');             // changing background color of task div
 }
 
