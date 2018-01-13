@@ -13,8 +13,8 @@ function createTask(form){
       $('#input').css('color','#D9D9D9')
       $('input').removeClass('white-placeholder');    //changing color of the placeholder
       $('input').addClass('grey-placeholder');
-      f='<div id="info">This is a simple tool that track tasks that last for how long, be efficient</div>';
-      $('#box').append(f);
+      footer='<div id="info">This is a simple tool that track tasks that last for how long, be efficient</div>';
+      $('#box').append(footer);
     }
     startTask(form);
 }
@@ -26,9 +26,16 @@ function startTask(form){
   taskList.push(task);
   sec.push(0);
   taskState.push(1);
-  var h='<div id="task'+count+'"><span id="name'+count+'">'+taskList[taskList.length-1]+'</span><span class="time">00 secs</span><div id="buttons'+count+'"><img  src="images/pause.png"  id="playPause"  onClick="playPause(this.parentNode.id)"><img src="images/tick.png" id="finish" onClick="taskFinish(this.parentNode.id)"></div></div>'
-  h='<br>'+h;            //adding break between two tasks
-  $('#box').append(h);   // appending new task div
+  var newTask='<div id="task'+count+'">'+
+        '<span id="name'+count+'">'+taskList[taskList.length-1]+'</span>'+
+          '<span class="time">00 secs</span>'+
+          '<div id="buttons'+count+'">'+
+            '<img  src="images/pause.png"  id="playPause"  onClick="playPause(this.parentNode.id)">'+
+            '<img src="images/tick.png" id="finish" onClick="taskFinish(this.parentNode.id)">'+
+          '</div>'+
+        '</div>'
+  newTask='<br>'+newTask;            //adding break between two tasks
+  $('#box').append(newTask);   // appending new task div
   count++;
 }
 
